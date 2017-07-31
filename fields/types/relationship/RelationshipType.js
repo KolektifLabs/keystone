@@ -256,10 +256,12 @@ relationship.prototype.updateItem = function (item, data, callback) {
 definePrototypeGetters(relationship, {
 	// Returns true if the relationship configuration is valid
 	isValid: function () {
+		if (!this.options.ref) { return false;}
 		return keystone.list(this.options.ref) ? true : false;
 	},
 	// Returns the Related List
 	refList: function () {
+		if (!this.options.ref) { return false;}
 		return keystone.list(this.options.ref);
 	},
 	// Whether the field has any filters defined
