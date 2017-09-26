@@ -2,6 +2,7 @@ var async = require('async');
 var FieldType = require('../Type');
 var util = require('util');
 var utils = require('keystone-utils');
+var _ = require('lodash');
 
 var isReserved = require('../../../lib/list/isReserved');
 
